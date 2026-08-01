@@ -1,0 +1,141 @@
+:root {
+    --bg-color: #1a1b26;        
+    --container-bg: #24283b;    
+    --user-msg-bg: #565f89;     
+    --bot-msg-bg: #3b4261;      
+    --accent-color: #7aa2f7;    
+    --text-main: #c0caf5;       
+    --text-white: #ffffff;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 800px;
+    background: var(--container-bg);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.chat-header {
+    background: rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.chat-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: var(--text-white);
+    font-weight: 600;
+}
+
+.clear-btn {
+    color: #f7768e; 
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    background: rgba(247, 118, 142, 0.1);
+    transition: background 0.2s;
+}
+
+.clear-btn:hover {
+    background: rgba(247, 118, 142, 0.2);
+}
+
+.chat-box {
+    flex: 1;
+    padding: 24px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;             
+}
+
+.message {
+    max-width: 75%;
+    padding: 14px 18px;
+    font-size: 0.98rem;
+    line-height: 1.5;
+    word-wrap: break-word;
+    border-radius: 16px;
+    color: var(--text-white);
+}
+
+
+.message.user {
+    background-color: rgb(127, 127, 237);
+    align-self: flex-end;         
+    border-bottom-right-radius: 4px; 
+}
+
+.message.assistant {
+    background-color: var(--bot-msg-bg);
+    align-self: flex-start;        
+    border-bottom-left-radius: 4px;  
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.input-area {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.input-form {
+    display: flex;
+    gap: 12px;
+}
+
+.input-form input {
+    flex: 1;
+    padding: 14px;
+    background: #1a1b26;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--text-white);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-form input:focus {
+    border-color: var(--accent-color);
+}
+
+.input-form button {
+    padding: 0 28px;
+    background: var(--accent-color);
+    color: #1a1b26;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.input-form button:hover {
+    background: #c6d5da;
+}
